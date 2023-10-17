@@ -1,0 +1,26 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.container {
+    display: grid;
+    place-items: center center;
+    margin-bottom: auto;
+    padding: auto;
+    border: none;
+    text-transform: uppercase;
+    transition: background-color 300ms ease;
+    
+}
+
+.boton {
+    border-radius: 1rem;
+
+    
+    @include m.boton(v.$azul, v.$blanco);
+    
+    &:hover {
+        cursor: pointer;
+        background-color: darken(v.$azul, 10%);
+
+    }
+}
